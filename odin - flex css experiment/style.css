@@ -1,0 +1,17 @@
+html, body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    width: 500px;
+    height: 300px;
+    margin: auto;
+}
+.container div {
+    flex: 1;
+    height: 100%;
+    background-color: pink;
+    border: 1px solid black;
+}
