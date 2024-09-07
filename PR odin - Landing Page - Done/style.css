@@ -1,0 +1,210 @@
+:root {
+    --bg-main-color: #1F2937;
+    --main-text-color: #F9FAFB;
+    --secondary-text-color: #FFFFFF;
+    --CTA-color: #3B82F6;
+    --info-text-color: #1F2937;
+    --more-bg-color: hsl(215, 28%, 37%);
+}
+
+p {
+    font-size: 1rem;
+}
+h1 {
+    font-size: 2rem;
+}
+/* Navbar ---------------------------------*/
+html, body {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+nav, nav span {
+    display: flex;
+    justify-content: space-around;
+    height: 50px;
+    width: 100%;
+    background-color: var(--bg-main-color);
+    color: var(--main-text-color);
+}
+nav span {
+    max-width: 1200px;
+}
+nav img {
+    height: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+nav ul {
+    margin-top: 0px;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    align-items: center;    
+    justify-content: space-evenly;
+}
+nav a {
+    font-size: 1.2rem;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    text-decoration: none;
+    transition: 0.15s;
+}
+nav a:hover {
+    transform: scale(1.03);
+}
+/* #Home section -------------- */
+#home {
+    height: 300px;
+    background: var(--bg-main-color);
+    display: flex;
+    align-items: center;
+}
+#home * {
+    font-family: "Montserrat", sans-serif;
+    text-align: left;
+}
+#home .container {
+    width: 90%;
+    max-width: 1200px;
+    height: 110%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 50px;
+    z-index: 52;
+}
+#home .container div {
+    position: relative;
+    top: -50px;
+    margin-left: 10px;
+    width: 45%;
+    height: auto;
+}
+#home .container h1, #home .container a {
+    color: var(--main-text-color);
+    font-weight: bold;
+}
+#home p {
+    color: var(--secondary-text-color);
+    transition: 0.015s;
+}
+#home img {
+    height: calc(60% + 10vw);
+    width: 45%;
+    object-fit: cover;
+}
+#home button{
+    border-radius: 5px;
+    background-color: #275aa6;
+    transition: 0.15s ;
+    padding: 12px;
+    border: none;
+    z-index: 999;
+    position: relative;
+}
+#home a {
+    text-decoration: none;
+    width: 100%;
+}
+#home button:hover {
+    background-color: var(--CTA-color);
+}
+/* Mid section ----------------------- */
+#homeSVG {
+    width: 100%;
+    position: absolute;
+    z-index: 4;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+/* Main section ---------------------- */
+#main {
+    margin-top: 50px;
+    height: auto;
+    width: 100%;
+    background-color: var(--main-text-color);
+}
+#main .header {
+    color: var(--bg-main-color);
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    position: relative;
+    top: calc(0.2*100vw);
+}
+#main .container {
+    margin: auto;
+    min-height: 400px;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding-bottom: 50px;
+    padding-top: 10px;
+    border-radius: 5px;
+    top: calc(0.2*100vw);
+    position: relative;
+    z-index: 999;
+}
+#main .container div {
+    height: 250px;
+    width: 90vw;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 5px solid var(--CTA-color);
+    /* Positioning */
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+}
+#main .container div h1 {
+    font-family: "Montserrat", sans-serif;
+    color: var(--info-text-color);
+    margin-bottom: 0px ;
+}
+#main #header-p {
+    color: var(--bg-main-color);
+    text-align: center;
+    position: relative;
+    top: calc(0.2*100vw);
+    font-family: "Montserrat", sans-serif;
+}
+#main img {
+    object-fit: cover;
+    height: 100px;
+    aspect-ratio: 1/1;
+}
+#main div p {
+    color: var(--info-text-color);
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    margin:10px;
+}
+#main a {
+    text-decoration: none;
+    transition: 0.15s;
+}
+#main a:hover {
+    transform: scale(1.02);
+    box-shadow: #3B82F6 0 0 10px 0px;
+    border-radius: 5px;
+}
+/* learn more section ------------ */
+#more {
+    margin-top: 20vw;
+    height: 500px;
+    width: 100%;
+    background-color: var(--CTA-color);
+    box-shadow: 0 0 80px 110px var(--CTA-color);
+}
