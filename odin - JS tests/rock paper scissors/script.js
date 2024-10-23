@@ -23,17 +23,43 @@ let Draw = 0
 function randomNum(max) {
     return(Math.floor(Math.random() * max))
 }
-
-function game (user, AI, userscore, Aiscore) {
-    AI = randomNum(3)
+/* 1 = rock / 2 = paper / 3 = scissors */
+function game (user, AI) { /* if a is returned, AI won, if b then otherwise */ 
+    /* Ths function can be optimised, inclused lots of repetitions, can be improved, not going to bother rn */
+    AI = randomNum(3) /* This chooses randomly AI's gesture */
     if(user == AI) {
         return(Draw++)
     }
     else if(user == 1) { /* If user picked rock */
-        if(user < AI) {
-
+        if(AI == 2) {
+            return("a")
         }
+        else if (AI = 3) {
+            return("b")
+        }
+    }
+    else if(user == 2) { /* User chose paper */
+        if(AI = 1) {
+            return("b")
+        }
+        if(AI = 3) {
+            return("a")
+        }
+    }
+    else if(user == 3) { /* user chose scissors */
+        if(AI == 1) {
+            return("a")
+        }
+        if(AI == 2) {
+            return("b")
+        }
+    }
+}
+function decide (userscore, AIscore) {
+    if (game(user, AI) == a) {
+        AIscore++
     }
 }
 
 
+ 
