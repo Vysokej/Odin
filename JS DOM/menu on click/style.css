@@ -1,0 +1,176 @@
+:root {
+    --nav-bg: #f5f4f6;
+    --body-bg: #f5f4f6;
+    --text-: #131014;
+    --cta-bg: #8f7d95;
+}
+.text {
+    font-family: "Source Code Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.flex {
+    display: flex;
+}
+.container {
+    width: 90vw;
+    height: auto;
+    margin: auto;
+}
+.px18 {
+    font-size: 18px;
+}
+.px14 {
+    font-size: 14px;
+}
+.icon {
+    width: 32px;
+    height: 32px;
+}
+a {
+    text-decoration: none;
+}
+html * {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    transition: .2s;
+}
+@media (max-width: 700px) {
+    #menu-button {
+        display: flex !important;
+    }
+    nav #nav-links {
+        position: absolute !important;
+        top: 0px !important;
+        left: 0px  !important;
+        height: 100vh !important;
+        width: 100vw !important;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        z-index: 998 !important;
+        background-color: green;
+        opacity: 0;
+        height: 0px;
+    }
+    nav #nav-links.visible {
+        opacity: 1;
+        height: 100vh;
+    }
+}
+/* nav settings */
+nav {
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    color: var(--text-);
+}
+nav .container {
+    justify-content: space-between;
+    align-items: center;
+}
+nav .container div {
+    align-items: center;
+    gap: 15px;
+}
+nav a {
+    color: var(--text-);
+}
+#menu-button {
+    display: none;
+    z-index: 999;
+}
+.visible {
+    display: flex !important;
+}
+
+/* frequently asked questions section */
+.faq.container {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    padding: 50px 0px;
+    color: var(--text-);
+}
+.faq .question {
+    border-bottom: 1px solid var(--text-);
+    width: 500px;
+    padding: 5px;
+}
+.faq .question .row {
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+}
+.drop-down-arrow {
+    transform: rotate(-90deg);
+    width: 32px;
+    height: 32px;
+}
+.rotate {
+    transform: rotate(360deg);
+}
+.answer {
+    z-index: 0;
+    font-family: "Source Code Pro", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 14px;
+    height: auto;
+    max-height: 0px;
+    opacity: 0;
+    transform: translateY(0);
+    width: 500px;
+}
+.answer.visible {
+    max-height: max-content;
+    transform: translateY(10px);
+    z-index: 2 !important;
+    opacity: 1;
+    padding: 3px 0px;
+}
+
+/* slider styling */
+.slider.container {
+    position: relative;
+    height: 300px;
+    border: 1px solid red;
+    width: 100vw;
+    overflow-x: hidden;
+}
+#button-span-holder {
+    position: absolute;
+    bottom: 10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 13px;
+    padding: 5px;
+}
+.slider-button {
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, .5);
+}
+.slider-image {
+    width: 90vw;
+    height: 100%;
+    border: 2px solid blue;
+    /* NEEDS TO BE EDITED OUT AT THE END */flex-shrink: 1;
+    background-size: cover;
+}
+
+
+
