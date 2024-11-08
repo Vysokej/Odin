@@ -56,6 +56,9 @@ for (let i = 0; i < numberOfImages; i++) {
 
     })
 }
-function ShowImage (i) {
-    const images = document.querySelectorAll(".slider-imag")
+function ShowImage (index) {
+    for(let i = 0; i < index; index++) {
+        const images = document.querySelectorAll(".slider-image")
+        images[index].style.display = "none";
+    }
 }
