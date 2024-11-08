@@ -34,7 +34,7 @@ function createSliderButtons(amount) {
 }
 createSliderButtons(numberOfImages);
 
-const sliderContainer = document.querySelectorAll(".slider.container");
+const sliderContainer = document.querySelectorAll("#slider-container");
 function createImageContainers(amount) {
     for(let i = 0; i < amount; i++) {
         /*creates the image container */
@@ -53,12 +53,15 @@ createImageContainers(imagesSources.length)
 for (let i = 0; i < numberOfImages; i++) {
     const button = document.querySelectorAll(".slider-button");
     button[i].addEventListener("click", () => {
-
+        button.forEach(button => {
+            button.style.backgroundColor = ""
+        })
+        button[i].style.backgroundColor = "rgba(255, 0, 0, .5)";
+        slideImage(i);
     })
 }
-function ShowImage (index) {
-    for(let i = 0; i < index; index++) {
-        const images = document.querySelectorAll(".slider-image")
-        images[index].style.display = "none";
-    }
+const images = document.querySelectorAll(".slider-image")
+function slideImage (index) {
+    const distance = index * -100;
+    sliderContainer[0].style.transform = `translate(${distance}%)`
 }

@@ -144,8 +144,7 @@ nav a {
 /* slider styling */
 .slider.container {
     position: relative;
-    height: 300px;
-    border: 1px solid red;
+    height: 400px;
     width: 100vw;
     overflow-x: hidden;
 }
@@ -158,18 +157,25 @@ nav a {
     gap: 13px;
     padding: 5px;
 }
+#slider-container {
+    height: 400px;
+    width: 100vw;
+    display: flex;
+    flex-wrap: nowrap;
+}
 .slider-button {
     border-radius: 50%;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     background-color: rgba(0, 0, 0, .5);
+    border: 11px solid transparent;
+    z-index: 999;
 }
 .slider-image {
-    width: 90vw;
+    width: 100vw;
     height: 100%;
-    border: 2px solid blue;
-    /* NEEDS TO BE EDITED OUT AT THE END */flex-shrink: 1;
     background-size: cover;
+    flex-shrink: 0;
 }
 
 
