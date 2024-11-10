@@ -65,3 +65,37 @@ function slideImage (index) {
     const distance = index * -100;
     sliderContainer[0].style.transform = `translate(${distance}%)`
 }
+
+/* I'm ... changing text */
+
+const phrases = ["AN ATHLETE", "A DESIGNER", "A DEVELOPER"];
+let currentPhrase = 0;
+let currentLetter = 0;
+let deleting = false;
+
+const typingElement = document.getElementById("changing-text");
+
+function typeEffect() {
+    const text = "HI I'M " + phrases[currentPhrase].slice(0, currentLetter);
+    typingElement.textContent = text;
+
+    const typingSpeed = 150;
+    const deletingSpeed = 80;
+
+    if (!deleting && currentLetter < phrases[currentPhrase].length) {
+        currentLetter++;
+        setTimeout(typeEffect, typingSpeed);
+    } else if (deleting && currentLetter > 0) {
+        currentLetter--;
+        setTimeout(typeEffect, deletingSpeed); 
+    } else if (currentLetter === phrases[currentPhrase].length) {
+        deleting = true;
+        setTimeout(typeEffect, 1000);
+    } else if (deleting && currentLetter === 0) {
+        deleting = false;
+        currentPhrase = (currentPhrase + 1) % phrases.length;
+        setTimeout(typeEffect, 500);
+    }
+}
+
+typeEffect();

@@ -41,6 +41,10 @@ html * {
     box-sizing: border-box;
     transition: .2s;
 }
+html {
+    overflow-x: hidden;
+    font-size: 18px;
+}
 @media (max-width: 700px) {
     #menu-button {
         display: flex !important;
@@ -176,6 +180,26 @@ nav a {
     height: 100%;
     background-size: cover;
     flex-shrink: 0;
+}
+
+/* changing text */
+.changing-text {
+    height: 300px;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+}
+#changing-text {
+    animation: typing 1s infinite step-end;
+}
+@keyframes typing {
+    from {
+        border-right: 1rem solid transparent;
+    }
+    50% {
+        border-right: 1rem solid #000;
+    }
 }
 
 
