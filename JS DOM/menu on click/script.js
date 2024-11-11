@@ -99,3 +99,19 @@ function typeEffect() {
 }
 
 typeEffect();
+
+const MousePosDisplay = document.createElement("div");
+const body = document.querySelector("body")
+body.appendChild(MousePosDisplay)
+MousePosDisplay.classList.add("mouse-position-display" , "text")
+
+body.addEventListener("mousemove", MousePosDisplayMove)
+
+function MousePosDisplayMove (event) {
+    MousePosDisplay.style.left = `${event.clientX + 0}px`;
+    MousePosDisplay.style.top = `${event.clientY + 0}px`
+    MousePosDisplay.textContent = `X: ${event.clientX}, Y: ${event.clientY}`
+    let color2 = event.clientY / 3.13;
+    let color1 = event.clientX / 5.64;
+    MousePosDisplay.style.backgroundColor = `rgb(${color1}, ${color2}, 0)`
+}

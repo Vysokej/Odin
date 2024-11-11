@@ -202,5 +202,16 @@ nav a {
     }
 }
 
+/* mouse position display class */
+.mouse-position-display {
+    position: absolute;
+    background-color: transparent;
+    border: 1px solid var(--text-);
+    width: auto;
+    height: auto;
+    padding: 5px;
+    z-index: 0;
+}
+
 
 
